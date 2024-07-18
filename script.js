@@ -1,6 +1,9 @@
 document.getElementById('calculatorForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
     const hires = parseInt(document.getElementById('hires').value);
     const retained = parseInt(document.getElementById('retained').value);
     const salary = parseInt(document.getElementById('salary').value);
@@ -8,9 +11,9 @@ document.getElementById('calculatorForm').addEventListener('submit', function(ev
     const fee = parseInt(document.getElementById('fee').value);
     const onboarding = parseInt(document.getElementById('onboarding').value);
     const searchTime = parseInt(document.getElementById('searchTime').value);
-    
-    if (isNaN(hires) || isNaN(retained) || isNaN(salary) || isNaN(tenure) || isNaN(fee) || isNaN(onboarding) || isNaN(searchTime)) {
-        document.getElementById('result').innerText = 'Please enter valid numbers in all fields.';
+
+    if (!firstName || !lastName || !email || isNaN(hires) || isNaN(retained) || isNaN(salary) || isNaN(tenure) || isNaN(fee) || isNaN(onboarding) || isNaN(searchTime)) {
+        document.getElementById('result').innerText = 'Please enter valid information in all fields.';
         return;
     }
     
@@ -52,5 +55,8 @@ document.getElementById('calculatorForm').addEventListener('submit', function(ev
         <p>Strategic Setbacks: Significant</p>
         <p>Reputational Impact: Considerable</p>
         <p><strong>Severity Rating: ${impactRating}/10</strong></p>
+        <p>Captured Data:</p>
+        <p>Name: ${firstName} ${lastName}</p>
+        <p>Email: ${email}</p>
     `;
 });
