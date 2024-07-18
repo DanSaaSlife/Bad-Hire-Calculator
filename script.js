@@ -27,5 +27,19 @@ document.getElementById('calculatorForm').addEventListener('submit', function(ev
     const left = hires - expectedRetained;
     const costBadHires = left * (salary * (tenure / 12) + fee);
     
-    document.getElementById('result').innerText = `The total cost of bad hires over 2 years is: $${costBadHires.toLocaleString()}`;
+    document.getElementById('result').innerHTML = `
+        <p>The total cost of bad hires over 12 months is: $${costBadHires.toLocaleString()}</p>
+        <p>Breakdown:</p>
+        <ul>
+            <li>Number of hires: ${hires}</li>
+            <li>Number expected to leave within 12 months: ${left}</li>
+            <li>Average salary per hire: $${salary.toLocaleString()}</li>
+            <li>Average length of time in business: ${tenure} months</li>
+            <li>Average recruitment fee per hire: $${fee.toLocaleString()}</li>
+            <li>Cost due to salary and tenure: $${(salary * (tenure / 12)).toLocaleString()}</li>
+            <li>Total cost of bad hires: $${costBadHires.toLocaleString()}</li>
+        </ul>
+        <p>Business Impact:</p>
+        <p>High turnover rates result in significant financial loss not only due to recruitment fees but also because of the lost productivity and the resources spent on training new hires who leave prematurely. Addressing retention issues can lead to improved stability, productivity, and overall morale within the company.</p>
+    `;
 });
