@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Hire Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bad Hire Cost Calculator</h1>
+        <form id="calculatorForm">
+            <label for="hires">Number of Hires in the Last 12 Months:</label>
+            <input type="number" id="hires" name="hires" required>
+            
+            <label for="retained">Number Expected to Still Be There in 2 Years:</label>
+            <input type="number" id="retained" name="retained" required>
+            
+            <label for="salary">Average Salary in USD:</label>
+            <input type="number" id="salary" name="salary" required>
+            
+            <label for="tenure">Average Length of Time in Business (months):</label>
+            <input type="number" id="tenure" name="tenure" required>
+            
+            <label for="fee">Average Recruitment Fee per Person in USD:</label>
+            <input type="number" id="fee" name="fee" required>
+            
+            <button type="submit">Calculate Cost</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
