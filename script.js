@@ -81,7 +81,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function(ev
         impactRating
     };
 
-    fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
+    fetch('https://script.google.com/macros/s/AKfycbwEXgtfWFR-ig4AD6Vq6dKq3h-jhifAL20BeuTsREtVfKQ1S-LoCxefVKeyWbReKBMF/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
