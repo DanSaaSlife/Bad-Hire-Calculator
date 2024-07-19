@@ -81,7 +81,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function(ev
         impactRating
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwEXgtfWFR-ig4AD6Vq6dKq3h-jhifAL20BeuTsREtVfKQ1S-LoCxefVKeyWbReKBMF/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxDDpsMgSW3-oNWhiFmgJB60mKj2MPvB1rKm9NPisg1UvfDYQhk_JrRMN0znUj7kmyL/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
